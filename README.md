@@ -1,2 +1,11 @@
-# Employee-Bonus.sql
-Write a solution to report the name and bonus amount of each employee with a bonus less than 1000.  Return the result table in any order.
+SELECT name, bonus 
+<br>
+FROM Employee
+<br>
+LEFT JOIN Bonus
+<br>
+ON Employee.empId = Bonus.empId
+<br>
+WHERE
+<br>
+bonus < 1000 OR bonus IS null;
